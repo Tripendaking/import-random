@@ -1,0 +1,21 @@
+def game():
+    # Generate a random number
+    target = random.randint(1, 100)
+    
+    # Start the guessing loop
+    while True:
+        # Ask the user for a guess
+        guess = int(input("Enter your guess: "))
+        
+        # Check if the guess is correct
+        if guess == target:
+            print("You got it! The number was", target)
+            break
+        elif guess < target:
+            print("Too low, try again.")
+        else:
+            print("Too high, try again.")
+
+if __name__ == "__main__":
+    game()
+
